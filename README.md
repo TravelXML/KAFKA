@@ -1,4 +1,3 @@
-```markdown
 # KAFKA 🚀
 KAFKA - Implementation with Node.js & Kafka.js
 
