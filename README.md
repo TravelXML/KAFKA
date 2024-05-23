@@ -1,5 +1,5 @@
 # KAFKA 🚀
-### KAFKA - Implementation with Node.js & Kafka.js - Order Management System / Inventory management System
+### KAFKA - Implementation with Node.js & Kafkajs - Order Management System / Inventory management System
 
 ## Case Study
 ### In a scenario where an order management system (oms) needs to publish stock or inventory of SKUs based on company ID and channel ID.
