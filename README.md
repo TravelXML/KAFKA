@@ -17,12 +17,12 @@
 
 [ZooKeeper](https://zookeeper.apache.org/doc/current/index.html) is a high-performance coordination service for distributed applications. It provides common services such as naming, configuration management, synchronization, and group services.
 
-- Start ZooKeeper Container and expose PORT `2181`:
+- Start ZooKeeper Container and expose default PORT `2181`:
   ```bash
   docker run -p 2181:2181 zookeeper
   ```
 
-- Start Kafka Container, expose PORT `9092`, and set up ENV variables:
+- Start Kafka Container, expose default PORT `9092`, and set up ENV variables:
   ```bash
   docker run -p 9092:9092 \
   -e KAFKA_ZOOKEEPER_CONNECT=<PRIVATE_IP>:2181 \
