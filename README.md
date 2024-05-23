@@ -87,6 +87,6 @@
    - Log messages from the Kafka consumer library (Kafkajs) indicating the start of consumption and group membership details.
    - `user-1: [inv-updates]: PART:0: {"company":"5432","channelId":"365667","skuCode":"345","inv":"8"}`: Represents the consumed message, indicating the user, topic, partition, and message content.
 
-```
 
-This README file provides detailed instructions for setting up and running Kafka with Node.js, including explanations of ZooKeeper, Docker commands, file structure, and how to run both the producer and consumer scripts. It also includes visuals for better understanding and utilizes emojis to make the content more engaging.
+
+
