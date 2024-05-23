@@ -1,38 +1,42 @@
-# KAFKA
-KAFKA - Implementation with node js & kafka js
+```markdown
+# KAFKA 🚀
+KAFKA - Implementation with Node.js & Kafka.js
 
-## Prerequisite
+## Case Study
+In a scenario where an order management system needs to publish stock or inventory of SKUs based on company ID and channel ID.
 
-  - Node.js: [Download Node.JS](https://nodejs.org/en)  prefer nod 18.0 ot latest LTS version
-  - Docker: [Download Docker](https://www.docker.com)
-  - VsCode: [Download VSCode](https://code.visualstudio.com)
-  - KafkaJs : [Install kafka Js](https://kafka.js.org/)
+## Prerequisites
+
+- Node.js: [Download Node.js](https://nodejs.org/en) (Preferably Node.js 18.0 or the latest LTS version)
+- Docker: [Download Docker](https://www.docker.com)
+- VSCode: [Download VSCode](https://code.visualstudio.com)
+- KafkaJs: [Install Kafka.js](https://kafka.js.org/)
 
 ## Commands
 
-### What is zookeeper?
+### What is ZooKeeper?
 
-ZooKeeper is a high-performance coordination service for distributed applications. It exposes common services - such as naming, configuration management, synchronization, and group services - in a simple interface so you don't have to write them from scratch. You can use it off-the-shelf to implement consensus, group management, leader election, and presence protocols. And you can build on it for your own, specific needs.
+[ZooKeeper](https://zookeeper.apache.org/doc/current/index.html) is a high-performance coordination service for distributed applications. It provides common services such as naming, configuration management, synchronization, and group services.
 
-For more details [can refer here](https://zookeeper.apache.org/doc/current/index.html)
+- Start ZooKeeper Container and expose PORT `2181`:
+  ```bash
+  docker run -p 2181:2181 zookeeper
+  ```
 
-- Start Zookeper Container and expose PORT `2181`.
-```bash
-docker run -p 2181:2181 zookeeper
-```
-- Start Kafka Container, expose PORT `9092` and setup ENV variables.
-```bash
-docker run -p 9092:9092 \
--e KAFKA_ZOOKEEPER_CONNECT=<PRIVATE_IP>:2181 \
--e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://<PRIVATE_IP>:9092 \
--e KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1 \
-confluentinc/cp-kafka
-```
+- Start Kafka Container, expose PORT `9092`, and set up ENV variables:
+  ```bash
+  docker run -p 9092:9092 \
+  -e KAFKA_ZOOKEEPER_CONNECT=<PRIVATE_IP>:2181 \
+  -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://<PRIVATE_IP>:9092 \
+  -e KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1 \
+  confluentinc/cp-kafka
+  ```
 
-# File Structre will look like this:
-Sure, here's the restructured and rephrased content for your GitHub README file:
+## File Structure
 
----
+![File Structure](https://github.com/TravelXML/KAFKA/assets/8361967/a07c9f9e-69b9-42d6-a2e6-787364608247)
+
+## First Run Publisher
 
 ### Running the Producer Script
 
@@ -58,26 +62,32 @@ Sure, here's the restructured and rephrased content for your GitHub README file:
    5432 365667 345 8
    ```
 
-   Here's what each value represents:
    - `company_id`: `5432`
    - `channel_id`: `365667`
    - `sku_code`: `345`
    - `no_of_inventory`: `8`
 
-   ![Prompt Example](path_to_your_image.png)
-
----
-
-This structure makes the instructions clear and easy to follow, ensuring users understand what each step entails and what each input represents.
-
-![image](https://github.com/TravelXML/KAFKA/assets/8361967/a07c9f9e-69b9-42d6-a2e6-787364608247)
-
-## First Run Publisher
-
-![image](https://github.com/TravelXML/KAFKA/assets/8361967/49018263-0863-4c64-9fb0-fd88b111f3bb)
-
+![Publisher Output](https://github.com/TravelXML/KAFKA/assets/8361967/49018263-0863-4c64-9fb0-fd88b111f3bb)
 
 ## Then Run Consumer
 
-![image](https://github.com/TravelXML/KAFKA/assets/8361967/cb738745-8263-4208-b6a5-bc54794bb973)
+### Running the Consumer Script
 
+1. **Execute the Consumer Script with User Name**:
+   ```sh
+   node consumer.js user-1
+   ```
+
+2. **Output Example**:
+   When you run the consumer script with a specific user name (`user-1` in this case), you will receive output similar to the following:
+
+   ![Consumer Output](https://github.com/TravelXML/KAFKA/assets/8361967/cb738745-8263-4208-b6a5-bc54794bb973)
+
+   - `user-1 is the group name`: Indicates the group name being used by the consumer script.
+   - `Consumer connected`: Confirmation that the consumer is connected.
+   - Log messages from the Kafka consumer library (Kafkajs) indicating the start of consumption and group membership details.
+   - `user-1: [inv-updates]: PART:0: {"company":"5432","channelId":"365667","skuCode":"345","inv":"8"}`: Represents the consumed message, indicating the user, topic, partition, and message content.
+
+```
+
+This README file provides detailed instructions for setting up and running Kafka with Node.js, including explanations of ZooKeeper, Docker commands, file structure, and how to run both the producer and consumer scripts. It also includes visuals for better understanding and utilizes emojis to make the content more engaging.
