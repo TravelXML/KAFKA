@@ -44,7 +44,7 @@ In a scenario where an order management system (oms) needs to publish stock or i
    cd your_project_directory
    ```
 
-2. **Execute the Producer Script**:
+2. **Execute the Producer Script to publish your inventory by sku level**:
    ```sh
    node producer.js
    ```
@@ -70,7 +70,7 @@ In a scenario where an order management system (oms) needs to publish stock or i
 
 ## Then Run Consumer
 
-### Running the Consumer Script
+### Running the Consumer Script to consume the inventory updates by sku level
 
 1. **Execute the Consumer Script with User Name**:
    ```sh
