@@ -1,0 +1,10 @@
+{
+    "name": "Kafka-app",
+    "version": "1.0.0",
+    "description": "Kafka App",
+    "author": "Sapan Mohanty",
+    "license": "MIT",
+    "dependencies": {
+        "kafkajs": "^2.2.4"
+    }
+}
