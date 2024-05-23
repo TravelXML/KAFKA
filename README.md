@@ -2,18 +2,15 @@
 KAFKA - Implementation with node js & kafka js
 
 ## Prerequisite
-- Knowledge
-  - Node.JS Intermediate level
-  - Experience with designing distributed systems
-- Tools
+
   - Node.js: [Download Node.JS](https://nodejs.org/en)  prefer nod 18.0 ot latest LTS version
   - Docker: [Download Docker](https://www.docker.com)
   - VsCode: [Download VSCode](https://code.visualstudio.com)
-  - KafkaJs : [install kafka Js] (https://kafka.js.org/)
+  - KafkaJs : [install kafka Js](https://kafka.js.org/)
 
 ## Commands
 
-# What is zookeeper?
+### What is zookeeper?
 
 ZooKeeper is a high-performance coordination service for distributed applications. It exposes common services - such as naming, configuration management, synchronization, and group services - in a simple interface so you don't have to write them from scratch. You can use it off-the-shelf to implement consensus, group management, leader election, and presence protocols. And you can build on it for your own, specific needs.
 
@@ -32,5 +29,6 @@ docker run -p 9092:9092 \
 confluentinc/cp-kafka
 ```
 
-File structre will look like this
+# File structre will look like this
+
 ![image](https://github.com/TravelXML/KAFKA/assets/8361967/a07c9f9e-69b9-42d6-a2e6-787364608247)
