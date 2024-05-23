@@ -6,7 +6,7 @@ KAFKA - Implementation with node js & kafka js
   - Node.js: [Download Node.JS](https://nodejs.org/en)  prefer nod 18.0 ot latest LTS version
   - Docker: [Download Docker](https://www.docker.com)
   - VsCode: [Download VSCode](https://code.visualstudio.com)
-  - KafkaJs : [install kafka Js](https://kafka.js.org/)
+  - KafkaJs : [Install kafka Js](https://kafka.js.org/)
 
 ## Commands
 
@@ -29,6 +29,6 @@ docker run -p 9092:9092 \
 confluentinc/cp-kafka
 ```
 
-# File structre will look like this
+# File Structre will look like this:
 
 ![image](https://github.com/TravelXML/KAFKA/assets/8361967/a07c9f9e-69b9-42d6-a2e6-787364608247)
