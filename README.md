@@ -44,12 +44,17 @@
    cd your_project_directory
    ```
 
-2. **Execute the Producer Script to publish your inventory by sku level**:
+   Or You can pull from DockerHub
+   ```sh
+   docker pull apige/kafka-node-inventory-update-for-oms-by-companyid-channelid:latest
+    ```
+
+3. **Execute the Producer Script to publish your inventory by sku level**:
    ```sh
    node producer.js
    ```
 
-3. **Provide Input When Prompted**:
+4. **Provide Input When Prompted**:
    The script will prompt you to enter the following details:
    - `company_id`
    - `channel_id`
